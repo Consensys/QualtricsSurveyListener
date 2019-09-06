@@ -1,26 +1,26 @@
 # QualtricsListener -- MVP v1.0
-Poor labor conditions, including low wages, unpaid overtime, and abusive employee management environments have all contributed to a systemic pattern of labor violations across the textile industry. However, a growing number of comapnies are dedicating themselves resolving factory worker issues by developing widespread and deeply impactful wellness programs for their contracted factory workers. Major retailers can employ over 140K factory workers and have more than 70 factories within their production effort, and they have historically strived toward holistic employee health and wellness.
+Poor labor conditions, including low wages, unpaid overtime, and abusive employee management environments have all contributed to a systemic pattern of labor violations across the textile industry. However, a growing number of companies are dedicating themselves resolving factory worker issues by developing widespread and deeply impactful wellness programs for their contracted factory workers. Major retailers can employ over 140K factory workers and have more than 70 factories within their production effort, and they have historically strived toward holistic employee health and wellness.
 
-The following repository seeks to provide an open source solution that can be appended to ongoing worker wellness surveying and grievance collection efforts facilitated at a manufacturing factories. The solution will need to accomplish the following: 
+The following repository seeks to provide an open source solution that can be appended to ongoing worker wellness surveying and grievance collection efforts facilitated at a manufacturing factories. The solution will need to accomplish the following:
 
 1. Anonymization of survey responses: Employees’ identity and privacy will be protected.
-2. Immutabile Reporting: Self-reported employee data will be secure and free from external manipulation. 
+2. Immutable Reporting: Self-reported employee data will be secure and free from external manipulation.
 3. Data Accessibility: Stakeholders throughout the supply chain (including workers, factory managers and leadership, supplier companies, and retailers), and possibly predetermined external stakeholders, will be able to access survey results. This will empower workers, while providing the employer data to better serve workers’ needs.
 4. Scalability: The solution will be designed in such a way that it can be scaled quickly beyond the retailer supply chain, making it possible for the survey to establish itself as a universal benchmark and communicate how businesses impact their employees’ well-being.
 
 ## Repository Breakdown
-In this implementation, the survey will need to leverage the Qualtrics platform, which provides for a Python and JAVA programming interfaces within their new survey response export API, and additionally provides support for R and NodeJS in their legacy v3 export API. The following repository, which is the MVP v1 iteration of the survey listener, will leverage the Python 3 (newest) Qualtrics API in an effort to address gaps in functionality that the newer API has yet to address. 
+In this implementation, the survey will need to leverage the Qualtrics platform, which provides for a Python and JAVA programming interfaces within their new survey response export API, and additionally provides support for R and NodeJS in their legacy v3 export API. The following repository, which is the MVP v1 iteration of the survey listener, will leverage the Python 3 (newest) Qualtrics API in an effort to address gaps in functionality that the newer API has yet to address.
 
-The customized API will have two parts: 
+The customized API will have two parts:
 
 1. Survey Listener Service (SLS): An Python 3-based AWS Elastic Beanstalk service that watches for new survey responses being submitted, and upon recognizing new responses, makes a call to our Smart Contract API
 
-2. Smart Contract API (SCA): A NodeJS-based Smart Contract API that, once it receives a POST call from the SLS, commits the data to the PostgreSql database and hashes the survey response to our smart contract. The SCA will be comprised of the following components 
+2. Smart Contract API (SCA): A NodeJS-based Smart Contract API that, once it receives a POST call from the SLS, commits the data to the PostgreSql database and hashes the survey response to our smart contract. The SCA will be comprised of the following components
 
-This repository (i.e. 'qualtrics_watcher') fullfills the first part of the solution. The second part can be found here: https://github.com/ConsenSys/workers-rights 
+This repository (i.e. 'qualtrics_watcher') fulfills the first part of the solution. The second part can be found here: https://github.com/ConsenSys/workers-rights
 
 ## Application Folder Structure
-The  has the following folder structure: 
+The  has the following folder structure:
 
     .
     ├── .git               # git build folder
@@ -36,19 +36,19 @@ The  has the following folder structure:
 1. Git clone the repository into a folder of your choice
 2. Attain the .env file that has the project secrets and put .env file in root folder of project
 3. Open up your terminal and change directory into the project folder of the repository
-4. Make sure that you are listening/processing the correct survey. There are three (2018_REAL_SURVEY_ID, 2017_REAL_SURVEY_ID, 2019_REAL_SURVEY_ID). This variable needs to be set on line 438 where application.py is setting "QUALTRICS_SURVEY_ID" variable in the try statement. 
+4. Make sure that you are listening/processing the correct survey. There are three (2018_REAL_SURVEY_ID, 2017_REAL_SURVEY_ID, 2019_REAL_SURVEY_ID). This variable needs to be set on line 438 where application.py is setting "QUALTRICS_SURVEY_ID" variable in the try statement.
 4. Execute the following command in your terminal: python3 application.py
 5. The script will be done once it restarts and signals that is it waiting for 300 seconds (for next iteration)
 6. MAKE SURE TO DELETE THE QUALTRICS DOWNLOAD AND PYCACHE FOLDERS BEFORE EXECUTING ANOTHER SURVEY.
 
 ## How to Set Up the Script
-1. Create a qualtrics account or sign up in your existing account. Remember, in order to access their API service you must have an upgraded account. 
+1. Create a qualtrics account or sign up in your existing account. Remember, in order to access their API service you must have an upgraded account.
 
 2. Find your profile image in the top right corner of the page and select "Account Settings"
 
 3. Find your Survey ID next to the survey of your choice in the Survey table (this is your QUALTRICS_SURVEY_ID)
 
-4. Generate a new Token to find your Access Token (this is your QUALTRICS_API_TOKEN) 
+4. Generate a new Token to find your Access Token (this is your QUALTRICS_API_TOKEN)
 
 5. In the url of your profile, find the QUALTRICS_DATA_CENTER id. Read more on how to find the QUALTRICS_DATA_CENTER id in your profile url: https://api.qualtrics.com/docs/root-url
 
@@ -138,8 +138,7 @@ By default, Elastic Beanstalk looks for a file called application.py to start yo
 You can access Qualtrics documentation here: https://api.qualtrics.com/reference/create-response-export
 
 ## Additional Repositories
-Additional repositories that are critical to the proof of concept can be found below: 
+Additional repositories that are critical to the proof of concept can be found below:
 
-- Smart Contract API: https://github.com/ConsenSys/workers-rights 
+- Smart Contract API: https://github.com/ConsenSys/workers-rights
 - Proof of Concept Listener (v0): https://github.com/ConsenSys/qualtrics_watcher
-# QualtricsSurveyListener
