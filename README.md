@@ -1,5 +1,5 @@
 # QualtricsListener -- MVP v1.0
-The following repository seeks to provide an open source solution that can be appended to ongoing worker wellness surveying and grievance collection efforts facilitated at a manufacturing factories. The solution will need to accomplish the following:
+The following repository seeks to provide an open source solution that can be appended to ongoing worker wellness surveying efforts facilitated at a manufacturing factories. The solution will need to accomplish the following:
 
 1. Anonymization of survey responses: Employees’ identity and privacy will be protected.
 2. Immutable Reporting: Self-reported employee data will be secure and free from external manipulation.
