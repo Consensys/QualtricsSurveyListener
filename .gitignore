@@ -1,0 +1,13 @@
+# Ignore files with sensitive information
+.env
+
+# Ignore files with elastic beanstalk information
+.elasticbeanstalk/
+
+# Ignore response files
+QualtricsDownload/
+__pycache__/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.DS_Store
