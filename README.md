@@ -17,7 +17,7 @@ The customized API will have two parts:
 
 2. Smart Contract API (SCA): A NodeJS-based Smart Contract API that, once it receives a POST call from the SLS, commits the data to the PostgreSql database and hashes the survey response to our smart contract. The SCA will be comprised of the following components
 
-This repository fulfills the first part of the solution. The second part can be found here: https://github.com/ConsenSys/WorkersRightsAPI
+This repository fulfills the first part of the solution. The second part can be found here: https://github.com/ConsenSys/WorkerWellnessAPI
 
 ## Application Folder Structure
 The  has the following folder structure:
@@ -140,4 +140,4 @@ You can access Qualtrics documentation here: https://api.qualtrics.com/reference
 ## Additional Repositories
 Additional repositories that are critical to the proof of concept can be found below:
 
-- Smart Contract API: https://github.com/ConsenSys/WorkersRightsAPI
+- Smart Contract API: https://github.com/ConsenSys/WorkerWellnessAPI
