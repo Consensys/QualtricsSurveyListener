@@ -62,7 +62,6 @@ async def postResponse(url, response):
     token = os.getenv("TOKEN")
 
     #define more complex values before setting dict
-    responseValue = json.dumps(response['originalResponseString'],separators=(',', ':'))
     responseAnswers = json.dumps(response['answers'], separators=(',', ':'))
 
     #set payload
